@@ -10,9 +10,9 @@ HOSTNAME='16ach6'
 KEYMAP='de-latin1' # list all options with: $ localectl list-keymaps
 LANGUAGE='en_US.UTF-8' # list all options with: $ locale -a
 LOCALES=('de_DE.UTF-8 UTF-8' 'de_DE ISO-8859-1' 'de_DE@euro ISO-8859-15' 'en_US.UTF-8 UTF-8') # list all options with: $ cat /usr/share/i18n/SUPPORTED
-SWAP_GB=16 # Positive integer. Set to machine's RAM size in GB
+SWAP_GB=8 # Positive integer. Set to machine's RAM size in GB
 TIMEZONE='Europe/Berlin' # list all options with: $ timedatectl list-timezones
-UCODE='amd-ucode' # 'intel-ucode' for Intel systems
+UCODE='intel-ucode' # 'intel-ucode' for Intel systems
 USERNAME='sid'
 
 
@@ -37,7 +37,7 @@ swapoff --all
 sgdisk --zap-all $DISK
 
 # Wipe filesystem
-[ $FORMAT -eq 1 ] && dd status=progress if=/dev/random of=$DISK
+# [ $FORMAT -eq 1 ] && dd status=progress if=/dev/random of=$DISK
 
 # Partition disk
 sgdisk -n1:1M:+1G         -t1:EF00 -c1:EFI  $DISK
