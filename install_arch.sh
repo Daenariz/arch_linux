@@ -5,7 +5,7 @@
 
 
 COUNTRY='DE' # Your country code for reflector. List all codes with: $ reflector --list-countries
-DISK='/dev/disk/by-id/nvme-Micron_MTFDHBA512TDV_21212F5AAB85' # '/dev/disk/by-id/ID'. List all IDs with: $ ls -lAh /dev/disk/by-id
+DISK='/dev/disk/by-id/wwn-0x50026b7764047641' # '/dev/disk/by-id/ID'. List all IDs with: $ ls -lAh /dev/disk/by-id
 HOSTNAME='16ach6'
 KEYMAP='de-latin1' # list all options with: $ localectl list-keymaps
 LANGUAGE='en_US.UTF-8' # list all options with: $ locale -a
